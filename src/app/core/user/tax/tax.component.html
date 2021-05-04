@@ -1,0 +1,129 @@
+<div class="header pb-6">
+  <div class="container-fluid">
+    <div class="header-body">
+      <div class="row align-items-center py-4">
+        <div class="col-lg-6 col-7">
+          <h6 class="h2 text-dark d-inline-block mb-0">
+            Tax Exemption & Refund
+          </h6>
+
+          <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+            <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+              <li class="breadcrumb-item">
+                <a href="javascript:void(0)">
+                  <i class="fas fa-file-invoice-dollar text-dark"> </i>
+                </a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid mt--6">
+  <div class="card">
+    <div class="card-header">
+      <h5 class="h3 mb-0">Fill in this form to apply for any tax exemption or refund.</h5>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="registerForm">
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label class="form-control-label">Name</label>
+              <input
+                class="form-control"
+                placeholder="Enter name"
+                formControlName="name"
+                type="text"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label class="form-control-label">ID/Passport number</label>
+              <input
+                class="form-control"
+                placeholder="Passport number"
+                formControlName="idnumber"
+                type="text"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label class="form-control-label">Email</label>
+              <input
+                class="form-control"
+                placeholder="Enter email"
+                formControlName="email"
+                type="text"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label class="form-control-label">Association</label>
+              <input
+                class="form-control"
+                placeholder="Enter association/organisation"
+                formControlName="association"
+                type="text"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label class="form-control-label">Nationality</label>
+              <input
+                class="form-control"
+                placeholder="Enter nationality"
+                formControlName="association"
+                type="text"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label class="form-control-label">Contact number</label>
+              <input
+                class="form-control"
+                placeholder="Enter contact number"
+                formControlName="contact-number"
+                type="tel"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <label class="form-control-label" for="idcard">
+                Type of tax exeption/refund
+              </label>
+
+              <select class="form-control" for="idcard">
+                <option value="0">-- Please choose --</option>
+                <option value="1">Refund Service tax</option>
+                <option value="2">Customs Excise Duty and Sales Tax</option>
+                <option value="3">Stamp Duty for Tenancy Agreement</option>
+                <option value="4">Property Gains Tax</option>
+                <option value="5">Assessment Rates</option>
+                <option value="6">Purchase Vehicle</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </form>
+      <button class="btn btn-primary" type="button" (click)="confirm()">
+        Submit
+      </button>
+    </div>
+  </div>
+</div>
